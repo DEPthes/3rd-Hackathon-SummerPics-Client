@@ -1,0 +1,21 @@
+.rankMain {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../assets/Rankbackground.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0 auto;
+}
+
+.rankTop {
+  position: fixed;
+  justify-content: center;
+  background-image: url("../../assets/Rankbackground-top.png");
+  background-size: cover;
+  background-position: center;
+  width: 109px;
+  height: 235px;
+  margin: 0;
+}
