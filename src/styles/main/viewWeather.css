@@ -1,0 +1,43 @@
+.mainComponent {
+  margin-top: 204px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.viewFont {
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  font-family: "Yeongdock";
+}
+.circle {
+  width: 222px;
+  height: 222px;
+  background-color: white;
+  border-radius: 50%;
+}
+.tempFont {
+  font-family: "Yeongdock";
+  font-size: 74px;
+  color: #ffca02;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin: 20px 0 0 0;
+}
+.statusMessage {
+  font-family: "Yeongdock";
+  font-size: 30px;
+  color: white;
+  margin: 20px 0 0 0;
+}
+.recomendBtton {
+  background-color: #003fd7;
+  width: 317px;
+  height: 50px;
+  font-family: "Yeongdock";
+  font-size: 24px;
+  color: white;
+  border: 0;
+  margin: 20px 0 0 0;
+}
