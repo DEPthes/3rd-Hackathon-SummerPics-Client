@@ -1,7 +1,4 @@
 .recommendMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-image: url("../../assets/RecommendBackground.png");
   background-size: cover;
   background-position: center;
@@ -11,13 +8,13 @@
   align-items: center;
 }
 .image-container {
-  width: 337px;
-  height: 310px;
+  width: 338px;
+  height: 312px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -17px;
-  margin-left: 1px;
+  margin-top: 228px;
+  margin-left: 27px;
   background-color: #f30000;
 }
 .image-container img {
@@ -27,5 +24,24 @@
 }
 
 .button {
-  margin-top: 10px;
+  margin-top: 13px;
+  display: grid;
+  row-gap: 20px;
+  margin-left: 10px;
+}
+
+.button button {
+  width: 370px;
+  height: 56px;
+  font-family: "Headline", sans-serif;
+  font-weight: bold;
+  border: none;
+  font-size: 36px;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #000aff, #00057d, #000aff);
 }
