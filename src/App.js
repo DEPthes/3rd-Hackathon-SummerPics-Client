@@ -1,11 +1,17 @@
 import "./App.css";
-import ViewWeather from "./components/main/ViewWeather";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import RecommendPage from "./pages/RecomendPage";
 
 function App() {
   return (
-    <div className="App">
-      <ViewWeather />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route path="/recommend" element={<RecommendPage />} />
+      </Routes>
+    </Router>
   );
 }
 

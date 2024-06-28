@@ -1,4 +1,5 @@
-import "../../styles/main/viewWeather.css";
+import { Link } from "react-router-dom";
+import "../../styles/main/ViewWeather.css";
 
 const ViewWeather = () => {
   const dummyWeatherData = {
@@ -17,7 +18,9 @@ const ViewWeather = () => {
       <div class="circle"></div>
       <h1 className="tempFont">{dummyWeatherData.temperature}℃</h1>
       <p className="statusMessage">{dummyWeatherData.statusMessage}</p>
-      <button className="recomendBtton">오늘의 짤 추천받기</button>
+      <Link to="/recommend" className="recomendBtton">
+        오늘의 짤 추천받기
+      </Link>
     </main>
   );
 };
