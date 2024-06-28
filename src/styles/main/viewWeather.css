@@ -7,41 +7,50 @@
 }
 .viewFont {
   font-size: x-large;
-  color: white;
+  color: #67ffe4;
   text-align: center;
-  font-family: "Yeongdock";
-}
-.circle {
-  width: 222px;
-  height: 222px;
-  background-color: white;
-  border-radius: 50%;
-}
-.tempFont {
-  font-family: "Yeongdock";
-  font-size: 74px;
-  color: #ffca02;
+  font-family: "Gungsuh", serif;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  margin: 20px 0 0 0;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 14px 0 0 0;
+}
+
+.tempFont {
+  font-family: "Headline", sans-serif;
+  font-size: 32px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin: 251px 0 0 0;
+  font-weight: bold;
 }
 .statusMessage {
-  font-family: "Yeongdock";
-  font-size: 30px;
-  color: white;
-  margin: 20px 0 0 0;
+  font-family: "Headline", sans-serif;
+  font-size: 60px;
+  color: #faff00;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin: 6px 0 0 0;
 }
 .recomendBtton {
-  background-color: #003fd7;
-  width: 317px;
+  width: 370px;
   height: 50px;
-  font-family: "Yeongdock";
-  font-size: 24px;
+  font-family: "Headline", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
   color: white;
-  border: 0;
-  margin: 20px 0 0 0;
+  margin: 48px 0 0 0;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    #000aff,
+    #00057d,
+    #000aff
+  ); /* Adjust the colors and direction as needed */
 }
