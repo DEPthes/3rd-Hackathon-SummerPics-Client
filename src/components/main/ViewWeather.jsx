@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "../../styles/main/ViewWeather.css";
+import LinkButton from "../button/LinkButton";
 
 const ViewWeather = () => {
   const dummyWeatherData = {
@@ -16,9 +16,8 @@ const ViewWeather = () => {
       </h1>
       <h1 className="tempFont">~ {dummyWeatherData.temperature}℃ ~</h1>
       <p className="statusMessage">{dummyWeatherData.statusMessage}</p>
-      <Link to="/recommend" className="recomendBtton">
-        오늘의 짤 추천받기
-      </Link>
+
+      <LinkButton route={"/recommend"} text={"오늘의 짤 추천받기"} />
     </main>
   );
 };

@@ -35,22 +35,3 @@
     1px 1px 0 #000;
   margin: 6px 0 0 0;
 }
-.recomendBtton {
-  width: 370px;
-  height: 50px;
-  font-family: "Headline", sans-serif;
-  font-weight: bold;
-  font-size: 36px;
-  color: white;
-  margin: 48px 0 0 0;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    #000aff,
-    #00057d,
-    #000aff
-  ); /* Adjust the colors and direction as needed */
-}
