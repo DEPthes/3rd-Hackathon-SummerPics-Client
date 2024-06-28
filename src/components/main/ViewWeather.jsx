@@ -88,6 +88,9 @@ const ViewWeather = () => {
       <div className="viewLinkButton">
         <LinkButton route={"/recommend"} text={"오늘의 짤 추천받기"} />
       </div>
+      <div className="CordiLinkButton">
+        <LinkButton route={"/cordi"} text={"오늘의 코디 추천받기"} />
+      </div>
     </main>
   );
 };

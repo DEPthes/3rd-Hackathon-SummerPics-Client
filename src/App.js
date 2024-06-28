@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage.jsx";
 import RecommendPage from "./pages/RecomendPage.jsx";
 import RankPage from "./pages/RankPage.jsx";
+import Cordi from "./pages/Cordi.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" element={<MainPage />} />
           <Route path="/recommend" element={<RecommendPage />} />
           <Route path="/rank" element={<RankPage />} />
+          <Route path="/cordi" element={<Cordi />} />
         </Routes>
       </Router>
     </div>

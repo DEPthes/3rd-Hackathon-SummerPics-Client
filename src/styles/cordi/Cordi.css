@@ -1,0 +1,36 @@
+.hotCordi {
+  background-image: url("../../assets/hotCordi.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  align-items: center;
+}
+.summerCordi {
+  background-image: url("../../assets/summerCordi.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  align-items: center;
+}
+.coolCordi {
+  background-image: url("../../assets/coolCordi.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  align-items: center;
+}
+.coldCordi {
+  background-image: url("../../assets/coldCordi.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  align-items: center;
+}
