@@ -1,0 +1,31 @@
+.recommendMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../../assets/RecommendBackground.png");
+  background-size: cover;
+  background-position: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  align-items: center;
+}
+.image-container {
+  width: 337px;
+  height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -17px;
+  margin-left: 1px;
+  background-color: #f30000;
+}
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.button {
+  margin-top: 10px;
+}

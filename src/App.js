@@ -6,12 +6,14 @@ import RecommendPage from "./pages/RecomendPage.jsx";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<MainPage />} />
-        <Route path="/recommend" element={<RecommendPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
+          <Route path="/recommend" element={<RecommendPage />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

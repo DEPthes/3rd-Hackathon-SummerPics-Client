@@ -1,14 +1,15 @@
+import "../styles/recommend/RecommendPage.css";
+import LinkButton from "../components/button/LinkButton";
+
 const RecommendPage = () => {
   return (
-    <main className="mainComponent">
-      {/* <h1 className="viewFont">
-        ♣{dummyWeatherData.location}♣의 <br />★{dummyWeatherData.day}★은 현재...
-      </h1>
-      <h1 className="tempFont">~ {dummyWeatherData.temperature}℃ ~</h1>
-      <p className="statusMessage">{dummyWeatherData.statusMessage}</p>
-      <Link to="/recommend" className="recomendBtton">
-        오늘의 짤 추천받기
-      </Link> */}
+    <main className="recommendMain">
+      <div className="image-container">
+        <img src={require("../assets/DummyImage.png")} alt="" />
+      </div>
+      <div className="button">
+        <LinkButton route={"/recommend"} text={"짤 랭크 보기"} />
+      </div>
     </main>
   );
 };
