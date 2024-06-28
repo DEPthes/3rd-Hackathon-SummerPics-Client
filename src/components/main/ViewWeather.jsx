@@ -1,13 +1,9 @@
+import { postImage } from "../../api/api.js";
 import "../../styles/main/ViewWeather.css";
 import LinkButton from "../button/LinkButton";
 import React, { useState, useEffect } from "react";
 
 const ViewWeather = () => {
-  const dummyWeatherData = {
-    temperature: 26,
-    statusMessage: "후덥지근",
-  };
-
   const [location, setLocation] = useState({
     latitude: null,
     longitude: null,
@@ -16,9 +12,9 @@ const ViewWeather = () => {
   const [currentDate, setCurrentDate] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
   const [formattedTime, setFormattedTime] = useState("");
-  //api 보내기 용 데이터
-  const latitude = Math.round(location.latitude);
-  const longitude = Math.round(location.longitude);
+  const [response, setResponse] = useState("");
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     // 현재 위치 얻기
     if (navigator.geolocation) {
@@ -56,12 +52,23 @@ const ViewWeather = () => {
 
     // 현재 시간에서 1시간 전 정각 시간 설정
     let hours = date.getHours();
-    const formattedHours = hours === 0 ? 23 : hours - 1;
+    const formattedHours = hours === 0 ? 23 : hours - 3;
     const formattedTime = `${
       formattedHours < 10 ? `0${formattedHours}` : formattedHours
-    }00`;
+    }30`;
     setFormattedTime(formattedTime);
   }, []);
+  useEffect(() => {
+    if (
+      formattedDate &&
+      formattedTime &&
+      location.latitude &&
+      location.longitude
+    ) {
+      handleSubmit();
+    }
+  }, [formattedDate, formattedTime, location]);
+
   const fetchCityName = async (latitude, longitude) => {
     try {
       const response = await fetch(
@@ -77,14 +84,37 @@ const ViewWeather = () => {
     }
   };
 
+  const handleSubmit = async () => {
+    const data = {
+      baseDate: formattedDate,
+      baseTime: formattedTime,
+      nx: Math.round(location.latitude).toString(),
+      ny: Math.round(location.longitude).toString(),
+    };
+    // const data = {
+    //   baseDate: "20240629",
+    //   baseTime: "0430",
+    //   nx: "37",
+    //   ny: "127",
+    // };
+
+    console.log("1", data);
+    try {
+      const result = await postImage(data);
+      setResponse(result);
+    } catch (error) {
+      console.error("Error submitting the form", error);
+    }
+  };
+  console.log(response);
   return (
     <main className="mainComponent">
       <h1 className="viewFont">
         ♣{location.city}시♣의 <br />★{currentDate}★은 현재...
       </h1>
       <img src={require("../../assets/S.png")} />
-      <h1 className="tempFont">~ {dummyWeatherData.temperature}℃ ~</h1>
-      <p className="statusMessage">{dummyWeatherData.statusMessage}</p>
+      <h1 className="tempFont">~ {response.temp}℃ ~</h1>
+      <p className="statusMessage">{response.weatherStatus}</p>
       <div className="viewLinkButton">
         <LinkButton route={"/recommend"} text={"오늘의 짤 추천받기"} />
       </div>

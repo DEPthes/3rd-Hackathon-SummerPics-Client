@@ -47,7 +47,7 @@
   position: absolute;
   top: 210px;
   width: 100%;
-  height: calc(100% - 260px); /* 높이를 지정하여 스크롤 가능하도록 */
+  height: calc(100% - 290px); /* 높이를 지정하여 스크롤 가능하도록 */
   overflow-y: auto; /* 수직 스크롤 가능 */
 }
 
@@ -153,4 +153,9 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, #000aff, #00057d, #000aff);
+}
+.index {
+  position: absolute;
+  left: 10%;
+  top: 3;
 }
